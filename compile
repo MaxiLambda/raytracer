@@ -1,0 +1,3 @@
+#!/bin/zsh 
+
+g++ -march=native -Wall -pedantic -O3 raytracer.cc statistics.cc 
