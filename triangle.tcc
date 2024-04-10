@@ -84,7 +84,10 @@ public:
     return true;
   }
 #else
-
+// TODO
+//  berehcnungen verzögern
+//  wurzeln später ziehen sqrt(a)/sqrt(b) = sqrt(a/b)
+//  abbrechen, wenn das berechnete t > minimum_t
 // optimized version
 bool intersects(Vector<T,3> origin, Vector<T,3> direction,
                    FLOAT &t, FLOAT &u, FLOAT &v, FLOAT minimum_t) {
