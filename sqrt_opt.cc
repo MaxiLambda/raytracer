@@ -17,8 +17,9 @@ double random_double()
 
 template <size_t LOOPS = 2>
 void measure_sqrt_time(void) {
-    const static int LOOP = 1000;
-    const static int N = 100000;
+    const static int LOOP = 1;
+    //HINT: Do Testing with N = 1
+    const static int N = 50000;
     MeasureTime<std::chrono::nanoseconds> time;
     alignas(128) float floats[N * 4];
     alignas(128) float roots[N * 4];
