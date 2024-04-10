@@ -68,6 +68,7 @@ public:
   // the value t for the intersection point is set
   // the barycentric coordinates of the intersection are set to u and v 
   // minimum_t is the parametic value for the current nearst intersection
+  //t, u, v sind Ausgabeparameter
   bool hasNearestTriangle(Vector<FLOAT,3> eye, Vector<FLOAT,3> direction, Triangle<FLOAT> *  & nearest_triangle, FLOAT &t, FLOAT &u, FLOAT &v, FLOAT minimum_t = INFINITY);
 };
 

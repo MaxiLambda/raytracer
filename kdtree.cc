@@ -5,6 +5,8 @@ BoundingBox::BoundingBox() { }
 BoundingBox::BoundingBox(Vector<FLOAT,3> min, Vector<FLOAT,3> max) 
  : min(min), max(max) { }
 
+ //left und right sind aussagbeparameter
+ //split entlang der längsten raumachse
 void BoundingBox::split(BoundingBox & left, BoundingBox & right) {
   // from here
   // TODO: your code
@@ -57,6 +59,7 @@ KDTree * KDTree::buildTree(KDTree * tree, std::vector< Triangle<FLOAT> *> & tria
 }
 
 KDTree *  KDTree::buildTree(std::vector< Triangle<FLOAT> *> & triangles)  {
+  //boundingbox über alle Dreicke muss berechnet werden
   KDTree * root = new KDTree();
   // from here
   // TODO: your code
@@ -64,6 +67,9 @@ KDTree *  KDTree::buildTree(std::vector< Triangle<FLOAT> *> & triangles)  {
   return root;
 }
 
+//erst die dreicke am Knoten, dann links, dann rechts prüfen
+//dreiecke am Knoten sequentiell prüfen
+//hier schnittpunkttest
 bool KDTree::hasNearestTriangle(Vector<FLOAT,3> eye, Vector<FLOAT,3> direction, Triangle<FLOAT> *  & nearest_triangle, FLOAT &t, FLOAT &u, FLOAT &v, FLOAT minimum_t) {
   // from here
   // TODO: your code
